@@ -1,0 +1,25 @@
+const fs =require('fs')
+//age是空的
+fs.rmdir('./age',err=>{
+    if(err){
+    console.log('删除失败'+err)
+    return
+}
+    console.log('删除成功')
+})
+//{recursive:true}能删除非空文件夹
+fs.rmdir('./file',{recursive:true},err=>{
+    if(err){
+    console.log('删除失败'+err)
+    return
+}
+    console.log('删除成功')
+})
+//递归删除
+fs.rmdir('./1',{recursive:true},err=>{
+    if(err){
+    console.log('删除失败'+err)
+    return
+}
+    console.log('删除成功')
+})
